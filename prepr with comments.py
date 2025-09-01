@@ -52,6 +52,18 @@ object, но и числовые, у которых менее 25 уникаль
 # df.loc[] Когда знаешь имена
 # df.iloc[]  Когда знаешь номера
 
+# Метод .apply() в Pandas позволяет применить функцию ко всем значениям:
+# 	•	в столбце (Series) или
+# 	•	в каждой строке/колонке (в DataFrame)
+
+# df['Age'].apply(lambda x: x + 1) Прибавляет 1 ко всем возрастам
+
+# def total(row):
+#     return row['math'] + row['physics']
+#
+# df.apply(total, axis=1)  Считает сумму двух предметов для каждой строки.
+
+
 
 class Preprocessor:
     def __init__(self, df: pd.DataFrame):
